@@ -43,6 +43,7 @@ for email, passwd in zip(emails, passwords):
         'email': email,
         'passwd': passwd
     }
+    print('data', data)
     try:
         print(f'[{email}] 进行登录...')
         response = json.loads(session.post(url=login_url,headers=header,data=data).text)
