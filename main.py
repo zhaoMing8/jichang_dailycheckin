@@ -57,7 +57,8 @@ for email, passwd in zip(emails, passwords):
         content = result['msg']
         # 进行推送
         push(content)
-    except:
+    except Exception as e:
         content = '签到失败'
         print(content)
         push(content)
+        print(str(e))
